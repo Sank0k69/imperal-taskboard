@@ -1,0 +1,10 @@
+{
+  "id": "taskboard",
+  "name": "Task Board",
+  "version": "1.0.0",
+  "description": "Project management board. Tasks, projects, priorities, Kanban columns. Built for teams.",
+  "author": "WebHostMost",
+  "entry": "main.py",
+  "requires": ["imperal-sdk>=1.5.0"],
+  "scopes": ["store:read", "store:write", "ai:complete", "config:read"]
+}

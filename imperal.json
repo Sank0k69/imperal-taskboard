@@ -1,0 +1,75 @@
+{
+  "app_id": "taskboard",
+  "version": "1.0.0",
+  "capabilities": [],
+  "tools": [
+    {
+      "name": "tasks",
+      "description": "Manage tasks and projects. Create, update, move, complete tasks. Organize by project, set priorities, track progress.",
+      "scopes": [
+        "*"
+      ],
+      "parameters": {
+        "message": {
+          "type": "string",
+          "required": false
+        },
+        "kwargs": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "__panel__board",
+      "description": "Panel: Task Board",
+      "scopes": [],
+      "parameters": {
+        "params": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "__panel__sidebar",
+      "description": "Panel: Task Board",
+      "scopes": [],
+      "parameters": {
+        "params": {
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  ],
+  "signals": [],
+  "schedules": [],
+  "required_scopes": [
+    "*"
+  ],
+  "config_defaults": {
+    "projects": [
+      "General",
+      "Work",
+      "Personal"
+    ],
+    "columns": [
+      "To Do",
+      "In Progress",
+      "Review",
+      "Done"
+    ]
+  },
+  "name": "Task Board",
+  "description": "Kanban-style project management. Create tasks, organize by project, set priorities, track progress. Your team's work in one place.",
+  "icon": "kanban-square",
+  "category": "productivity",
+  "tags": [
+    "tasks",
+    "kanban",
+    "project-management",
+    "productivity",
+    "trello"
+  ]
+}
