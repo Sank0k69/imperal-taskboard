@@ -16,7 +16,7 @@ from imperal_sdk import Extension, ChatExtension, ActionResult
 from imperal_sdk.ui import (
     Page, Section, Stack, Grid, Tabs,
     Header, Text, Stat, Stats, Badge, Divider, Icon,
-    Card, Button, Image,
+    Card, Image,
     Form, Input, TextArea, Select,
     List, ListItem, Empty, Alert,
     Progress, KeyValue, Html,
@@ -190,7 +190,7 @@ PRIORITY_COLORS = {"high": "red", "medium": "yellow", "low": "green"}
 PROJECT_COLORS = {"General": "blue", "Work": "purple", "Personal": "green"}
 
 
-@ext.panel("board", slot="main", title="Task Board", icon="kanban-square")
+@ext.panel("board", slot="center", title="Task Board", icon="kanban-square")
 async def board_panel(ctx):
     """Main board — Kanban columns."""
     all_tasks = await ctx.store.query("tasks", {})
@@ -284,12 +284,11 @@ async def sidebar_panel(ctx):
     return Page(
         title="Task Board",
         children=[
-            Button(
-                label="New Task",
-                variant="primary",
-                icon="plus",
-                full_width=True,
-                on_click=Call(function="create_task", title="New task", project="General"),
+            Form(
+                action="create_task",
+                submit_label="New Task",
+                children=[],
+                defaults={"title": "New task", "project": "General"},
             ),
             Divider(),
             Stats(children=[
