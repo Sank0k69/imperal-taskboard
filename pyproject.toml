@@ -2,4 +2,4 @@
 name = "taskboard"
 version = "1.0.1"
 requires-python = ">=3.11"
-dependencies = ["imperal-sdk>=3.4.0"]
+dependencies = ["imperal-sdk>=3.5.0"]
