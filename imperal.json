@@ -1,7 +1,13 @@
 {
   "app_id": "taskboard",
   "version": "1.0.1",
-  "capabilities": [],
+  "capabilities": [
+    "Task Creation",
+    "Kanban Board",
+    "Project Management",
+    "Priority Tracking",
+    "Progress Reports"
+  ],
   "tools": [
     {
       "name": "tasks",
